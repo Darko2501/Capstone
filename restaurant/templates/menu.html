@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<h1>Menu</h1>
+
+<p class="menu-paragraph">
+    <ul class="menu-list">
+        {% for item in menu_items %}
+        <li class="menu-item">
+            <span class="item-title">{{ item.Title }}</span>
+            <span class="menu-price">${{ item.Price }}.00</span>
+            <span class="menu-inventory">Inventory: {{ item.Inventory }}</span>
+        </li>
+        {% endfor %}
+    </ul>
+</p>
+
+{% endblock %}
+
+
